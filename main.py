@@ -1,8 +1,8 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext, ContextTypes
+import os
 
-# Your Telegram Bot's API Token
-API_TOKEN = '7974234245:AAGGgR3hPKXxqCwtYIVkS5Y_ZuXlsmVwRbY'
+API_TOKEN = os.environ['API_TOKEN']
 
 # Define the /start command handler
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
